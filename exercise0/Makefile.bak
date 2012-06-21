@@ -1,0 +1,88 @@
+# This Makefile is brutally simple, not very sophisticated,
+# and not at all up to my normal standards...
+# ...Be grateful, dear reader!
+# (Signed, Prof. R. Moore, h_da, fbi )
+
+# --------------------------------------------------------------------------
+all: mpi-pi cpp11-pi6 cpp11-pi7 cpp11-pi8 cpp11-pi9 cpp11-pi10 cpp11-pi11 cpp11-pi12 openMP-pi
+
+clean:
+	-rm -f *.o mpi-pi cpp11-pi6 cpp11-pi7 cpp11-pi8 cpp11-pi9 cpp11-pi10 cpp11-pi11 cpp11-pi12 openMP-pi
+
+mpi-pi.o: mpi-pi.c
+	mpicc.mpich2 -c $<
+
+mpi-pi: mpi-pi.o
+	mpicc.mpich2 -o mpi-pi mpi-pi.o
+
+
+cpp11-pi6.o: cpp11-pi6.cpp
+	c++ -std=c++0x -pthread -c $<
+
+cpp11-pi6: cpp11-pi6.o
+	c++ -std=c++0x -o cpp11-pi6 cpp11-pi6.o -lpthread
+
+cpp11-pi7.o: cpp11-pi7.cpp
+	c++ -std=c++0x -pthread -c $<
+
+cpp11-pi7: cpp11-pi7.o
+	c++ -std=c++0x -o cpp11-pi7 cpp11-pi7.o -lpthread
+
+cpp11-pi8.o: cpp11-pi8.cpp
+	c++ -std=c++0x -pthread -c $<
+
+cpp11-pi8: cpp11-pi8.o
+	c++ -std=c++0x -o cpp11-pi8 cpp11-pi8.o -lpthread
+
+cpp11-pi9.o: cpp11-pi9.cpp
+	c++ -std=c++0x -pthread -c $<
+
+cpp11-pi9: cpp11-pi9.o
+	c++ -std=c++0x -o cpp11-pi9 cpp11-pi9.o -lpthread
+
+cpp11-pi10: cpp11-pi10.o
+	c++ -std=c++0x -o cpp11-pi10 cpp11-pi10.o -lpthread
+
+cpp11-pi10.o: cpp11-pi10.cpp
+	c++ -std=c++0x -pthread -c $<
+
+cpp11-pi11: cpp11-pi11.o
+	c++ -std=c++0x -o cpp11-pi11 cpp11-pi11.o -lpthread
+
+cpp11-pi11.o: cpp11-pi11.cpp
+	c++ -std=c++0x -pthread -c $<
+
+cpp11-pi12: cpp11-pi12.o
+	c++ -std=c++0x -o cpp11-pi12 cpp11-pi12.o -lpthread
+
+cpp11-pi12.o: cpp11-pi12.cpp
+	c++ -std=c++0x -pthread -c $<
+
+openMP-pi.o: openMP-pi.cpp
+	c++ -std=c++0x -fopenmp -c $<
+
+openMP-pi: openMP-pi.o
+	c++ -std=c++0x -fopenmp -o openMP-pi openMP-pi.o
+
+tests: all
+	echo -e "\nRunning mpi-pi...";
+	#mpiexec.mpich2 -n 4 --hosts icm-2010-2,icm-2010-3 ./mpi-pi
+	echo -e "\nRunning cpp11-pi6...";
+	./cpp11-pi6 4
+	echo -e "\nRunning cpp11-pi7...";
+	./cpp11-pi7 4
+	echo -e "\nRunning cpp11-pi8...";
+	./cpp11-pi8 4
+	echo -e "\nRunning cpp11-pi9...";
+	./cpp11-pi9 4
+	echo -e "\nRunning cpp11-pi10...";
+	./cpp11-pi10 4
+	echo -e "\nRunning cpp11-pi11...";
+	./cpp11-pi11 4
+	echo -e "\nRunning cpp11-pi12...";
+	./cpp11-pi12 4
+	echo -e "\nRunning openMP-pi...";
+	./openMP-pi 4
+
+
+

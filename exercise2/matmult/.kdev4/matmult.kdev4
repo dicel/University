@@ -1,0 +1,16 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x0e\x00m\x00a\x00t\x00m\x00u\x00l\x00t)
+
+[CMake]
+BuildDirs=/home/mavi/studium/10semester/pdc/pra/exercise2/matmult/build
+CMakeDir=/Modules
+Current CMake Binary=file:///home/mavi/studium/10semester/pdc/pra/exercise2/matmult/Makefile
+CurrentBuildDir=file:///home/mavi/studium/10semester/pdc/pra/exercise2/matmult/build
+CurrentBuildType=Debug
+CurrentInstallDir=
+Extra Arguments=
+ProjectRootRelative=./
+
+[MakeBuilder]
+Make Binary=/home/mavi/studium/10semester/pdc/pra/exercise2/matrix/Makefile
+Number Of Jobs=1

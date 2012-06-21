@@ -1,0 +1,32 @@
+echo -e "\nRunning mpi-pi...";
+-e 
+Running mpi-pi...
+#mpiexec.mpich2 -n 4 --hosts icm-2010-2,icm-2010-3 ./mpi-pi
+echo -e "\nRunning cpp11-pi6...";
+-e 
+Running cpp11-pi6...
+./cpp11-pi6 4
+Pi is approximately 3.141592653589903, Error is 1.101341240428155e-13
+Wall clock time = 0.014187 seconds.
+echo -e "\nRunning cpp11-pi7...";
+-e 
+Running cpp11-pi7...
+./cpp11-pi7 4
+Pi is approximately 3.141592653589686, Error is 1.070254995738651e-13
+Wall clock time = 0.098878 seconds.
+echo -e "\nRunning cpp11-pi8...";
+-e 
+Running cpp11-pi8...
+./cpp11-pi8 4
+Pi is approximately 3.141592653590217, Error is 4.236611061969597e-13
+Wall clock time = 0.976311 seconds.
+echo -e "\nRunning cpp11-pi9...";
+-e 
+Running cpp11-pi9...
+./cpp11-pi9 4
+Pi is approximately 3.141592653589768, Error is 2.486899575160351e-14
+Wall clock time = 9.75685 seconds.
+echo -e "\nRunning cpp11-pi10...";
+-e 
+Running cpp11-pi10...
+./cpp11-pi10 4

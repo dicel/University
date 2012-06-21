@@ -1,0 +1,52 @@
+# This Makefile is brutally simple, not very sophisticated,
+# and not at all up to my normal standards...
+# ...Be grateful, dear reader!
+# (Signed, Prof. R. Moore, h_da, fbi )
+
+# --------------------------------------------------------------------------
+all: mpi-pi cpp11-pi openMP-pi
+
+clean:
+	-rm -f *.o mpi-pi cpp11-pi openMP-pi
+
+mpi-pi.o: mpi-pi.c
+	mpicc.mpich2 -c $<
+
+mpi-pi: mpi-pi.o
+	mpicc.mpich2 -o mpi-pi mpi-pi.o
+
+
+cpp11-pi.o: cpp11-pi.cpp
+	c++ -std=c++0x -pthread -c $<
+
+cpp11-pi: cpp11-pi.o
+	c++ -std=c++0x -o cpp11-pi cpp11-pi.o -lpthread
+
+openMP-pi.o: openMP-pi.cpp
+	c++ -std=c++0x -fopenmp -c $<
+
+openMP-pi: openMP-pi.o
+	c++ -std=c++0x -fopenmp -o openMP-pi openMP-pi.o
+
+tests: all
+	echo -e "\nRunning mpi-pi...";
+	#mpiexec.mpich2 -n 4 1000000 ./mpi-pi #--hosts icm-2010-2,icm-2010-3 ./mpi-pi
+	echo -e "\nRunning cpp11-pi...";
+	./cpp11-pi 4 100000	
+	./cpp11-pi 4 1000000
+	./cpp11-pi 4 10000000
+	./cpp11-pi 4 100000000
+	./cpp11-pi 4 1000000000
+	./cpp11-pi 4 10000000000
+	./cpp11-pi 4 100000000000
+	echo -e "\nRunning openMP-pi...";
+	./openMP-pi 4 100000
+	./openMP-pi 4 1000000
+	./openMP-pi 4 10000000
+	./openMP-pi 4 100000000
+	./openMP-pi 4 1000000000
+	./openMP-pi 4 10000000000
+	./openMP-pi 4 100000000000
+
+
+
