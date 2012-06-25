@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.26)  21 JUN 2012 00:34
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.26)  25 JUN 2012 23:16
 entering extended mode
  %&-line parsing enabled.
 **bare_conf.tex
@@ -122,18 +122,18 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 ) (./bare_conf.aux)
 \openout1 = `bare_conf.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 343.
+LaTeX Font Info:    ... okay on input line 343.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 343.
+LaTeX Font Info:    ... okay on input line 343.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 343.
+LaTeX Font Info:    ... okay on input line 343.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 343.
+LaTeX Font Info:    ... okay on input line 343.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 343.
+LaTeX Font Info:    ... okay on input line 343.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 343.
+LaTeX Font Info:    ... okay on input line 343.
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -148,33 +148,115 @@ LaTeX Font Info:    ... okay on input line 351.
 \MPnumerator=\count96
 \everyMPtoPDFconversion=\toks17
 )
-Underfull \hbox (badness 3460) in paragraph at lines 435--440
-[]\OT1/ptm/m/n/10 The par-al-lelized cal-cu-la-tion of PI has been cho-sen
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 400.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 400.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 400.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 427.
+
+Underfull \hbox (badness 1796) in paragraph at lines 427--432
+\OT1/ptm/m/n/10 bench-mark-ing the same al-go-rithm run-ning at the same
  []
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 435--440
+Underfull \hbox (badness 2626) in paragraph at lines 427--432
+\OT1/ptm/m/n/10 C++11 stan-dard and OpenMP API from the OpenMP
+ []
+
+
+Underfull \hbox (badness 3536) in paragraph at lines 427--432
 \OT1/ptm/m/n/10 MPIChameleon 2 (MPICH2) re-leased by the Ar-gonne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--440
+Underfull \hbox (badness 10000) in paragraph at lines 427--432
+
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 520--523
+\OT1/ptm/m/n/10 The PI cal-cu-la-tion al-go-rithm was taken form Ar-gonne
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 520--523
+
+ []
+
+
+LaTeX Warning: Reference `img:ex01' on page 1 undefined on input line 525.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
+[]\OT1/ptm/m/n/10 The ob-tained em-pir-i-cal bench-mark re-sults for
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 525--526
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 000\OML/cmm/m/it/10 ; \OT1/
+cmr/m/n/10 000\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 000$ \OT1/ptm/m/n/10 rect-an-g
+les with $\OML/cmm/m/it/10 P$ \OT1/ptm/m/n/10 threads/processes are
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 
  []
 
 <graphics/ex01.png, id=1, 509.905pt x 337.26pt>
 File: graphics/ex01.png Graphic file (type png)
  <use graphics/ex01.png>
-Overfull \hbox (2.95187pt too wide) in paragraph at lines 542--543
+Overfull \hbox (2.95187pt too wide) in paragraph at lines 528--529
 [][] 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 591.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 591.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 591.
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
+
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
+
+ []
+
+File: graphics/ex01.png Graphic file (type png)
+<use graphics/ex01.png>
+Overfull \hbox (2.95187pt too wide) in paragraph at lines 552--553
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
+
+ []
+
+File: graphics/ex01.png Graphic file (type png)
+<use graphics/ex01.png>
+Overfull \hbox (2.95187pt too wide) in paragraph at lines 561--562
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
+
+ []
+
+
+LaTeX Warning: Citation `anl' on page 2 undefined on input line 570.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
+
+ []
+
+(./bare_conf.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -186,26 +268,30 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[2 <./graphics/ex01.png (PNG copy)>] (./bare_conf.aux)
 
+LaTeX Warning: There were undefined references.
 
- <./graphics/ex01.png (PNG copy)>] (./bare_conf.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 1688 strings out of 495061
- 25845 string characters out of 1182621
- 78315 words of memory out of 3000000
- 4896 multiletter control sequences out of 15000+50000
- 37650 words of font info for 71 fonts, out of 3000000 for 9000
+ 1693 strings out of 495061
+ 25897 string characters out of 1182621
+ 82338 words of memory out of 3000000
+ 4900 multiletter control sequences out of 15000+50000
+ 34801 words of font info for 68 fonts, out of 3000000 for 9000
  31 hyphenation exceptions out of 8191
- 26i,8n,21p,472b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive
-/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/urw/times/ut
-mb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/shar
-e/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/font
-s/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (1 page, 57749 bytes).
+ 26i,8n,21p,683b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texli
+ve/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
+times/utmr8a.pfb>
+Output written on bare_conf.pdf (2 pages, 101204 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
