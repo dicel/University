@@ -426,9 +426,9 @@ Dummy begins. The parallelized calculation of PI ($\pi$) has been chosen to comp
 \section{Introduction}
 The parallelized calculation of PI ($\pi$) has been chosen to compare different parallel computing technologies by benchmarking the same algorithm running at the same machines. Thus a short program has been written meeting the special requirements of the technologies. Notably these technologies are the MPICH2 implementation of the message passing interface (MPI), the Threads library from the new C++11 standard and OpenMP API from the OpenMP consortium.\\
 All these standards allow inter process/thread communication which is a crucial requirement to parallelize tasks on modern multi core computer systems. Though all technologies use different approaches.\\  
-The MPI is a standardized communication protocol which applies the concept of message passing to communicate between processes. They may be running on the same or on different systems connected by a network. In comparison to the other technologies briefly introduced below, it works on processes and not on threads. The MPI implementation MPIChameleon 2 (MPICH2) released by the Argonne National Laboratory has been used for the benchmarks in this paper.\\%Add a source
-The latest version of the C++ standard C++11 released in late 2011 supports parallelization by multithreaded programming. The C++11 standard library provides a thread class which takes a function object to start a new thread. The concept for inter thread communication is synchronization. In order to compile the PI calculation program the GNU Compiler Collection (GCC) tool chain has been set up.\\%Add a source
-The third used technology is the OpenMP API. It makes it possible to parallelize threads by preprocessor directives. The trusted communication concept for the threads is to use shared memory. The same random access memory (RAM) area can be accessed by different threads at the same time.\\%Add a source
+The MPI is a standardized communication protocol which applies the concept of message passing to communicate between processes. They may be running on the same or on different systems connected by a network. In comparison to the other technologies briefly introduced below, it works on processes and not on threads. The MPI implementation MPIChameleon 2 (MPICH2) released by the Argonne National Laboratory has been used for the benchmarks in this paper \cite{anl}.\\
+The latest version of the C++ standard C++11 released in late 2011 supports parallelization by multithreaded programming. The C++11 standard library provides a thread class which takes a function object to start a new thread. The concept for inter thread communication is synchronization. In order to compile the PI calculation program the GNU Compiler Collection (GCC) tool chain has been set up \cite{cpp11}.\\%Add a source
+The third used technology is the OpenMP API. It makes it possible to parallelize threads by preprocessor directives. The trusted communication concept for the threads is to use shared memory. The same random access memory (RAM) area can be accessed by different threads at the same time \cite{omp}.\\
 
 %\hfill mds
  
@@ -522,12 +522,12 @@ The PI calculation algorithm was taken form Argonne National Laboratory and was 
 To achieve meaningful measurement results the number of rectangles was set to $100,000,000$ and $1,000,000,000$ while the number of threads/processes grew by a factor of $p = 2$ $P = \{1,2,4,8,16,32,64\}$. Each setting was measured three times and concluding the average was taken as result. For the MPICH2 benchmark four machines as described above were used. The next section discusses the empirical results of the benchmarks.\\%sources
 
 \section{Empirical Results}
-The obtained empirical benchmark results for $1,000,000,000$ rectangles with $P$ threads/processes are shown in figure \ref{img:ex01}.\\
+The obtained empirical benchmark results for $1,000,000,000$ rectangles with $P$ threads/processes are shown in figure \ref{img:ex0a}.\\
 
 \begin{figure}[!ht]
-	\includegraphics[scale=0.5]{graphics/ex01.png}
+	\includegraphics[scale=0.5]{graphics/ex0a.png}
 	\caption{Benchmark result for 1,000,000,000 rectangles.}
-	\label{img:ex01a}
+	\label{img:ex0a}
 \end{figure}
 
 The y-axis plots the run time in seconds, the x-axis the number of threads/processes. For one thread/process the run time is the same on any platform. For $p$ where $1 < p < 16$ the measured time is almost equal on all platforms. Just the MPI run time is in average between 10 and 20 milliseconds shorter. For $p >= 16$ threads it is for C++11 and OpenMP slightly longer than with just 8 cores. In contrast the MPICH2 could succeed a further speedup with 16 and 32 processes. Certainly the run time becomes longer with 64 processes. The following table gives an overview about the measured fastest run times, listed independent from the number of threads/processes.\\
@@ -545,33 +545,31 @@ The y-axis plots the run time in seconds, the x-axis the number of threads/proce
 	\label{tab:runtimes}
 \end{center}
 
-The results for $1 \cdot 10^{9}$ are almost the same but divided by $10$ which follows from the number of rectangles $(1 \cdot 10^{8} \div 10)$.\\
+The results for $1 \cdot 10^{8}$ are almost the same but divided by $10$ which follows from the number of rectangles $(1 \cdot 10^{9} \div 10)$. Therefore these results are not discussed any further.\\
 
 %Speedup diagram
 \begin{figure}[!ht]
-	\includegraphics[scale=0.5]{graphics/ex01.png}
+	\includegraphics[scale=0.5]{graphics/ex0b.png}
 	\caption{Speedup for 1,000,000,000 rectangles.}
-	\label{img:ex01b}
+	\label{img:ex0b}
 \end{figure}
 
-As shown in figure \ref{img:ex01b} the speedup $S(p)$ is the highest with the MPI technology. C++11 and OpenMP reaching their maximum of a $S(p) = 7.98$ with $8$ threads, where MPI's maximum is $S(p) = 31.42$ with $32$ processes.\\
+As shown in figure \ref{img:ex0b} the highest speedup $S(p)$ can be achieved with the MPI technology. C++11 and OpenMP reaching their maximum of a $S(p) = 7.98$ with $8$ threads, where MPI's maximum is $S(p) = 31.42$ with $32$ processes.\\
 
 %Efficiency diagram
 \begin{figure}[!ht]
-	\includegraphics[scale=0.5]{graphics/ex01.png}
-	\caption{Efficiency for the values from figure \ref{img:ex01b}.}
-	\label{img:ex01c}
+	\includegraphics[scale=0.5]{graphics/ex0c.png}
+	\caption{Efficiency for the values from figure \ref{img:ex0c}.}
+	\label{img:ex0c}
 \end{figure}
 
-Following the results from the speedup in figure \ref{img:ex01b} we receive the following efficiency graphs (figure \ref{img:ex01c}). Finally the next section finds a conclusion concerning the introduced values.\\
+Following the results from the speedup (figure \ref{img:ex0b}) we receive the efficiency graphs in figure \ref{img:ex0c}. Looking closer on the values for 8 threads the efficiency $E(p)$ converges to $1$ with all technologies. The graph even shows values above $E(p) = 1$ because of the smoothing and not because of a measurement imprecision. In order to Amdahl's law there can't be an efficiency $E(p)\ \leq\ 1$.
+Based on the presented empirical results the next section draws a conclusion.\\
 
 \section{Conclusion}
-
-The conclusion goes here \cite{anl}.
-%Speedup, theoretical & practical
-%Efficiency, theoretical & practical
-%Improvement
-
+The run time of C++11 and OpenMP speeds up until it reaches the hardware limitation of the computer systems. Due to the fact they are running on a single machine with a maximum of 16 parallel threads/processes the highest expected speedup would be achieved with 15 cores. One core would stay reserved for system management operations. Because the measured number of threads always increased by a factor of $2$ the maximum speedup with 8 threads is ($S(p) = 7.98$) with an efficiency $E(p)\ \approx\ 1$. Thus both, speedup and efficiency drop for a further growing $p$.\\
+This limitation is not valid for the MPI technology because it uses more machines for the calculation. As described above a single system has a maximum of 16 parallel threads/processes. In order of the four used machines we expected a maximum speedup with $(4 \cdot 16) - 4$ because of the run time any machine needs for its system operations. The empirical results have shown that. The speedup grows until it reaches the maximum of $S(p) = 31.42$ with 32 processes. For 64 processes it decreases again. The efficiency converges against $1$ until 64 processes are used.\\
+A further improvement on the one machine platforms could be achieved with more hardware cores. A further speedup with MPI could be realised by using more systems for the calculation.\\
 
 % conference papers do not normally have an appendix
 
